@@ -2,11 +2,12 @@
 ---
 Created by [Yizhak (Itzik) Ben-Shabat](http://www.itzikbs.com), [Michael Lindenbaum](http://www.cs.technion.ac.il/people/mic/index.html), and [Anath Fischer](https://meeng.technion.ac.il/members/anath-fischer/) from [Technion, I.I.T](https://www.technion.ac.il/en/).
 
-![Nesti-Net_pipeline](https://github.com/sitzikbs/Nesti-Net/blob/master/doc/nestinet_architecture.PNG)
+![Nesti-Net_pipeline](https://github.com/sitzikbs/Nesti-Net/blob/master/doc/NestiNet_pipeline.png)
 
 ### Introduction
-This is the code for estimating normal vectors for unstructured 3D point clouds using Nesti-Net. It allows to train, test and evaluate our different normal estimation models.
-First run train, then run test then run evaluate. Alternatively, you can run test on a pretrained model. 
+This is the code for estimating normal vectors for unstructured 3D point clouds using Nesti-Net. It allows to train, test and evaluate our different normal estimation models. We provide the option to train a model or use a pretrained model. Please follow the installation instructions below.
+
+Here is a short [YouTube](https://www.youtube.com/watch?v=E7PudeA4XvM) video providing a brief overview of the methods.
 
 Abstract:
 
