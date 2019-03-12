@@ -199,18 +199,13 @@ class PointcloudPatchDataset(data.Dataset):
         self.include_normals = False
         self.include_curvatures = False
         self.include_noise = False
-        self.include_scales = False
-
         for pfeat in self.patch_features:
             if pfeat == 'normal':
                 self.include_normals = True
             elif pfeat == 'max_curvature' or pfeat == 'min_curvature':
                 self.include_curvatures = True
-                self.include_scales = True
             elif  pfeat == 'noise':
                 self.include_noise = True
-            elif pfeat == 'scales':
-                self.include_scales = True
             else:
                 raise ValueError('Unknown patch feature: %s' % (pfeat))
 
@@ -353,12 +348,8 @@ class PointcloudPatchDataset(data.Dataset):
 
         if self.include_curvatures:
             patch_curv = torch.from_numpy(shape.curv[center_point_ind, :])
-            scales = torch.from_numpy(np.array(self.patch_radius_absolute[shape_ind], dtype=np.float32))
             # scale curvature to match the scaled vertices (curvature*s matches position/s):
-            # patch_curv = patch_curv * self.patch_radius_absolute[shape_ind][0]
-
-        if self.include_scales:
-            scales = torch.from_numpy(np.array(self.patch_radius_absolute[shape_ind], dtype=np.float32))
+            patch_curv = patch_curv * self.patch_radius_absolute[shape_ind][0]
 
         if self.include_noise:
             patch_noise = shape.noise_level
@@ -418,13 +409,10 @@ class PointcloudPatchDataset(data.Dataset):
                 patch_feats = patch_feats + (patch_normal,)
             elif pfeat == 'max_curvature':
                 patch_feats = patch_feats + (patch_curv[0:1],)
-                patch_feats = patch_feats + (scales,)  # automatically add scales to curvatures
             elif pfeat == 'min_curvature':
                 patch_feats = patch_feats + (patch_curv[1:2],)
             elif pfeat == 'noise':
                 patch_feats = patch_feats + (patch_noise,)
-            elif pfeat == 'scales':
-                patch_feats = patch_feats + (scales,)
             else:
                 raise ValueError('Unknown patch feature: %s' % (pfeat))
 

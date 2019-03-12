@@ -1,16 +1,17 @@
-***Curve-Net***: Principal Curvature Estimation for Unstructured 3D Point Clouds using Convolutional Neural Networks
+***Nesti-Net***: Normal Estimation for Unstructured 3D Point Clouds using Convolutional Neural Networks
 ---
 Created by [Yizhak (Itzik) Ben-Shabat](http://www.itzikbs.com), [Michael Lindenbaum](http://www.cs.technion.ac.il/people/mic/index.html), and [Anath Fischer](https://meeng.technion.ac.il/members/anath-fischer/) from [Technion, I.I.T](https://www.technion.ac.il/en/).
 
-Based on the Nesti-Net repository for normal estimtaion. 
 ![Nesti-Net_pipeline](https://github.com/sitzikbs/Nesti-Net/blob/master/doc/NestiNet_pipeline.png)
 
 ### Introduction
-This is the code for estimating principal curvatures for unstructured 3D point clouds using Curve-Net. 
-It allows to train, test and evaluate our different normal estimation models. We provide the option to train a model or use a pretrained model. Please follow the installation instructions below.
+This is the code for estimating normal vectors for unstructured 3D point clouds using Nesti-Net. It allows to train, test and evaluate our different normal estimation models. We provide the option to train a model or use a pretrained model. Please follow the installation instructions below.
 
+Here is a short [YouTube](https://www.youtube.com/watch?v=E7PudeA4XvM) video providing a brief overview of the methods.
 
 Abstract:
+
+We propose a normal estimation method for unstructured 3D point clouds. This method, called Nesti-Net, builds on a new local point cloud representation which consists of multi-scale point statistics (MuPS), estimated on a local coarse Gaussian grid. This representation is a suitable input to a CNN architecture. The normals are estimated using a mixture-of-experts (MoE) architecture, which relies on a data-driven approach for selecting the optimal scale around each point and encourages sub-network specialization. Interesting insights into the network's resource distribution are provided. The scale prediction significantly improves robustness to different noise levels, point density variations and different levels of detail. We achieve state-of-the-art results on a benchmark synthetic dataset and present qualitative results on real scanned scenes. 
 
 ### Citation
 If you find our work useful in your research, please cite our [paper](https://arxiv.org/abs/1812.00709):
