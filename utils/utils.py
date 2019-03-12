@@ -353,7 +353,22 @@ def euclidean_to_spherical(points, format='degrees'):
     return phi, teta
 
 
-
+def map_curvatures(current_curvatures):
+    """
+    map_curvatures maps the curvature values of the input to be minimum and maximum and disregards sign (upper triangle)
+    :param current_curvatures: B x 2 principal curvature values to map
+    :return: B x 2 mapped curvature values
+    """
+    # maps the curvatures to unoriented maximum and minimum curvatures
+    mapped_curvatures = np.zeros_like(current_curvatures)
+    min_c = current_curvatures.min(axis=1)
+    max_c = current_curvatures.max(axis=1)
+    mapped_curvatures[:, 0] = min_c
+    mapped_curvatures[:, 1] = max_c
+    idxs = mapped_curvatures[:, 1] < -mapped_curvatures[:, 0]
+    mapped_curvatures[idxs, 0] = -max_c[idxs]
+    mapped_curvatures[idxs, 1] = -min_c[idxs]
+    return mapped_curvatures
 
 if __name__ == "__main__":
 
