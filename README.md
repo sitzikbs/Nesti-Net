@@ -14,16 +14,25 @@ Abstract:
 We propose a normal estimation method for unstructured 3D point clouds. This method, called Nesti-Net, builds on a new local point cloud representation which consists of multi-scale point statistics (MuPS), estimated on a local coarse Gaussian grid. This representation is a suitable input to a CNN architecture. The normals are estimated using a mixture-of-experts (MoE) architecture, which relies on a data-driven approach for selecting the optimal scale around each point and encourages sub-network specialization. Interesting insights into the network's resource distribution are provided. The scale prediction significantly improves robustness to different noise levels, point density variations and different levels of detail. We achieve state-of-the-art results on a benchmark synthetic dataset and present qualitative results on real scanned scenes. 
 
 ### Citation
-If you find our work useful in your research, please cite our [paper](https://arxiv.org/abs/1812.00709):
+If you find our work useful in your research, please cite our [CVPR paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Ben-Shabat_Nesti-Net_Normal_Estimation_for_Unstructured_3D_Point_Clouds_Using_Convolutional_CVPR_2019_paper.html):
 
-Preprint:
-
+ @InProceedings{Ben-Shabat_2019_CVPR,
+	author = {Ben-Shabat, Yizhak and Lindenbaum, Michael and Fischer, Anath},
+	title = {Nesti-Net: Normal Estimation for Unstructured 3D Point Clouds Using Convolutional Neural Networks},
+	booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+	month = {June},
+	year = {2019}
+	}
+ 
+ [Preprint](https://arxiv.org/abs/1812.00709):
+ 
     @article{ben_shabat2018nestinet,
       title={Nesti-Net: Normal Estimation for Unstructured 3D Point Clouds using Convolutional Neural Networks},
       author={Ben-Shabat, Yizhak and Lindenbaum, Michael and Fischer, Anath},
       journal={arXiv preprint arXiv:1812.00709},
       year={2018}
     }
+
 
 ### Installation
 Install [Tensorflow](https://www.tensorflow.org) and [scikit-learn](http://scikit-learn.org/stable/).
