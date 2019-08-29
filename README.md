@@ -16,12 +16,12 @@ We propose a normal estimation method for unstructured 3D point clouds. This met
 ### Citation
 If you find our work useful in your research, please cite our [CVPR paper](http://openaccess.thecvf.com/content_CVPR_2019/html/Ben-Shabat_Nesti-Net_Normal_Estimation_for_Unstructured_3D_Point_Clouds_Using_Convolutional_CVPR_2019_paper.html):
 
- @InProceedings{Ben-Shabat_2019_CVPR,
-	author = {Ben-Shabat, Yizhak and Lindenbaum, Michael and Fischer, Anath},
-	title = {Nesti-Net: Normal Estimation for Unstructured 3D Point Clouds Using Convolutional Neural Networks},
-	booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-	month = {June},
-	year = {2019}
+	@inproceedings{Ben-Shabat_2019_CVPR,
+		author = {Ben-Shabat, Yizhak and Lindenbaum, Michael and Fischer, Anath},
+		title = {Nesti-Net: Normal Estimation for Unstructured 3D Point Clouds Using Convolutional Neural Networks},
+		booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+		month = {June},
+		year = {2019}
 	}
  
  [Preprint](https://arxiv.org/abs/1812.00709):
