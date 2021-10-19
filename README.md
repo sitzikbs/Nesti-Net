@@ -33,6 +33,8 @@ If you find our work useful in your research, please cite our [CVPR paper](http:
       year={2018}
     }
 
+Additionally, if you found this relevant to your work, you may find our latest [DeepFit paper and repo](https://github.com/sitzikbs/DeepFit). 
+
 
 ### Installation
 Install [Tensorflow](https://www.tensorflow.org) and [scikit-learn](http://scikit-learn.org/stable/).
